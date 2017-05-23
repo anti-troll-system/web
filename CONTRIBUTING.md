@@ -8,6 +8,6 @@ This project adheres to the Contributor Covenant [code of conduct](http://contri
 
 ## How Can I Contribute?
 
-- [Reporting Bugs](https://github.com/antitrollsystem/frontend/issues)
-- [Suggesting Enhancements](https://github.com/antitrollsystem/frontend/issues)
-- [Pull Requests](https://github.com/antitrollsystem/frontend/pulls)
+- [Reporting Bugs](https://github.com/anti-troll-system/frontend/issues)
+- [Suggesting Enhancements](https://github.com/anti-troll-system/frontend/issues)
+- [Pull Requests](https://github.com/anti-troll-system/frontend/pulls)
