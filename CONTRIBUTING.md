@@ -1,13 +1,13 @@
-# How to contribute
+# Ako prispieť k projektu?
 
-:+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
+:+1::tada: Ako prvé, ďakujeme, že si si našiel čas a chuť prispieť! :tada::+1:
 
-## Code of Conduct
+## Zásady správania sa
 
-This project adheres to the Contributor Covenant [code of conduct](http://contributor-covenant.org/version/1/4/). By participating, you are expected to uphold this code. Please report unacceptable behavior to [luckylooke@gmail.com](mailto:luckylooke@gmail.com).
+Tento projekt dodržiava dohovor prispievateľa o [kódexe správania] (https://github.com/luckylooke/contributor_covenant/blob/patch-2/version/1/4/sk/code_of_conduct.md). Zúčastňovaním sa na prispievaní, sa očakáva, že tento kódex budeš dodržovať. Ak sa stretneš s porušením tohto kódexu, prosím nahláste nám ho na adresu [luckylooke@gmail.com] (mailto: luckylooke@gmail.com). Ďakujeme.
 
-## How Can I Contribute?
+## Ako môžem prispieť?
 
-- [Reporting Bugs](https://github.com/anti-troll-system/frontend/issues)
-- [Suggesting Enhancements](https://github.com/anti-troll-system/frontend/issues)
+- [Nahlásiť chybu](https://github.com/anti-troll-system/frontend/issues)
+- [Navrhnúť vylepšenie](https://github.com/anti-troll-system/frontend/issues)
 - [Pull Requests](https://github.com/anti-troll-system/frontend/pulls)
