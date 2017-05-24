@@ -4,7 +4,7 @@
 
 ## Zásady správania sa
 
-Tento projekt dodržiava dohovor prispievateľa o [kódexe správania](https://github.com/luckylooke/contributor_covenant/blob/patch-2/version/1/4/sk/code_of_conduct.md). Zúčastňovaním sa na prispievaní, sa očakáva, že tento kódex budeš dodržovať. Ak sa stretneš s porušením tohto kódexu, prosím nahláste nám ho na adresu [luckylooke@gmail.com](mailto: luckylooke@gmail.com). Ďakujeme.
+Tento projekt dodržiava dohovor prispievateľa o [kódexe správania](https://github.com/luckylooke/contributor_covenant/blob/patch-2/version/1/4/sk/code_of_conduct.md). Zúčastňovaním sa na prispievaní, sa očakáva, že tento kódex budeš dodržovať. Ak sa stretneš s porušením tohto kódexu, prosím nahláste nám ho na adresu [luckylooke@gmail.com](mailto:luckylooke@gmail.com). Ďakujeme.
 
 ## Ako môžem prispieť?
 
