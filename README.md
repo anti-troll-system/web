@@ -10,7 +10,7 @@ Frontend pre Anti-troll system
 - stiahni si projekt a otvor adresár v terminály/príkazovom riadku
 - je potrebné nainštalovať závislosti `npm install`
 
-### Spustenie
+### Spustenie
 
 - otvor si adresár v terminály/príkazovom riadku `cd anti-troll-frontend`
 - spusti aplikáciu `node debug.js`
