@@ -1,0 +1,15 @@
+{
+  "name": "antitrollfrontend",
+  "description": "Anti-Troll System: Front-End",
+  "version": "1.0.0",
+  "main": "release.js",
+  "dependencies": {
+    "total.js": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["anti", "troll", "system"],
+  "author": "Slovenskí vývojári",
+  "license": "MIT"
+}
