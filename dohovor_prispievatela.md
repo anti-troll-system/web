@@ -25,7 +25,7 @@ Príklady neprijateľného správania, zahŕňajú:
   príspevky a osobné či politické útoky
 * Verejný alebo súkromný harašment
 * Uverejňovanie súkromných údajov bez výslovného zvolenia
-* Iné činy, ktoré odôvodnene môžu byť považované za nevhodné profesionálneho prostredia 
+* Iné činy, ktoré odôvodnene môžu byť považované za nevhodné v profesionálnom prostredí 
 
 ## Naše zodpovednosti
 
@@ -40,17 +40,17 @@ dôvodov chovania ktoré považujú za nevhodné, výhražné, urážlivé alebo
 
 ## Rozsah
 
-Tento kódex sa uplatňuje na projekt ako aj na verejné miesta, kde individuál reprezentuje
+Tento kódex sa uplatňuje na projekt ako aj na verejné miesta, kde jednotlivec reprezentuje
 projekt, alebo jeho komunitu. Príklady reprezentácie projektu alebo jeho komunity zahŕňajú
-používanie oficiálnehej emailovej adresy projektu, komunikáciu cez oficiálny účet na sociálnych
+používanie oficiálnej e-mailovej adresy projektu, komunikáciu cez oficiálny účet na sociálnych
 sieťach, alebo pri vystupovaní ako určený zástupca pri offline alebo online udalostiach.
 Reprezentácia projektu môže byť ďalej definovaná a objasnená správcami projektu.
 
 ## Zdôraznenie
 
-Prejavy zneužívania, harašmentu, alebo iného neprijateľného správania môže byť ohlásený
+Prejavy zneužívania, harašmentu, alebo iného neprijateľného správania môžu byť ohlásené
 kontaktovaním projektového tímu na [info@vjednotejesila.sk](mailto:info@vjednotejesila.sk). Všetky sťažnosti budú posúdené
-a vyšetrené a vyústia v odpoveď, ktorá bude považovaná ako potrebná a adekvátna za daných
+a vyšetrené a vyústia v odpoveď, ak bude považovaná ako potrebná a adekvátna za daných
 okolností. Projektový tím je povinný dodržovať diskrétnosť s ohľadom na nahlasovateľa 
 prípadu. Ďalšie detaily presadzovacej politiky môžu byť popísané mimo tohoto dokumentu.
 
