@@ -16,7 +16,7 @@ Príklady správania, ktoré prispievajú k vytváraniu pozitívného prostredia
 * Rešpektovať rôznosť pohľadu na vec a skúseností
 * Mierumilovne akceptovať konštruktívnu kritiku
 * Sústrediť sa na potreby komunity
-* Ukazovať empatiu voči ostatným členom komunity
+* Preukazovať empatiu voči ostatným členom komunity
 
 Príklady neprijateľného správania, zahŕňajú:
 
