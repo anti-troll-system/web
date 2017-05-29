@@ -25,7 +25,7 @@ Príklady neprijateľného správania, zahŕňajú:
   príspevky a osobné či politické útoky
 * Verejný alebo súkromný harašment
 * Uverejňovanie súkromných údajov bez výslovného zvolenia
-* Iné činy, ktoré oddôvodnene môžu byť považované za nevhodné profesionálneho prostredia 
+* Iné činy, ktoré odôvodnene môžu byť považované za nevhodné profesionálneho prostredia 
 
 ## Naše zodpovednosti
 
