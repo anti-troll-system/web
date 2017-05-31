@@ -1,6 +1,6 @@
-# Fontend
+# Web
 
-Frontend pre Anti-troll system
+Web pre Anti-troll system
 
 ## Ako spustiť projekt u seba?
 
