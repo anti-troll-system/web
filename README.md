@@ -12,7 +12,7 @@ Web pre Anti-troll system
 
 ### Spustenie
 
-- otvor si adresár v terminály/príkazovom riadku `cd anti-troll-frontend`
+- otvor si adresár v terminály/príkazovom riadku `cd anti-troll-web`
 - spusti aplikáciu `node debug.js`
 
 ---
