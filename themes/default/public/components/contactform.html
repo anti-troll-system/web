@@ -1,14 +1,10 @@
 <div data-jc-scope="?">
 
 	<div data-jc="visible" data-jc-path="response" data-if="value && value.success" class="hidden">
-		<br />
-		<br />
-		<div class="center">
-			<div><span class="fa fa-5x green fa-check-circle"></span></div>
-			<p class="mt10"><b class="dark">@(The contact form has been sent successfully.</b><br />We will contact you as soon as possible.)</p>
+		<div class="contactform-success">
+			<div><span class="fa fa-5x fa-check-circle"></span></div>
+			<p><b>Kontaktný formulár bol úspešne odoslaný.</b><br />V priebehu niekoľkých hodín Vás budeme spätne kontaktovať.</p>
 		</div>
-		<br />
-		<br />
 	</div>
 
 	<div data-jc="visible" data-jc-path="response" data-if="value == null || !value.success">
@@ -46,6 +42,11 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.contactform-success { line-height: 20px; text-align: center; }
+	.contactform-success .fa { color: #8CC152; }
+</style>
 
 <script>
 
