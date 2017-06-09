@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext" rel="stylesheet" type="text/css" />
+	<meta name="robots" content="all,follow" />
+	@{import('meta', 'head', 'default.js', 'default.css', 'favicon.ico')}
+</head>
+<body data-jc="exec,binder">
+
+	<div data-jc="loading" class="hidden"></div>
+
+	<header>
+		<a href="/" class="logo"><img src="/img/logo.png" height="40" border="0" alt="Anti-Troll System" /></a>
+		<p><strong>Anti-Troll</strong> System</p>
+		<div class="mainmenubutton">
+			<button class="exec" data-exec="mainmenu"><i class="fa fa-th"></i></button>
+		</div>
+		<nav class="mainmenu" data-b="common.mainmenu" data-b-class="n => n ? '+mainmenu-visible' : '-mainmenu-visible'">
+			<a href="/">Úvodná stránka</a>
+			<a href="/faq/"><i class="fa fa-question-circle"></i>FAQ</a>
+			<a href="/projekt/">Projekt</a>
+			<a href="/api/">API</a>
+			<a href="/kontakt/"><i class="fa fa-envelope-o"></i>Kontakt</a>
+		</nav>
+	</header>
+	<nav class="breadcrumb">
+	@{if url !== '/'}
+		@{foreach m in sitemap()}
+			<i class="fa fa-@{if index}caret-right@{else}home@{fi}"></i>
+			<a href="@{m.url}">@{m.name}</a>
+		@{end}
+	@{fi}
+	</nav>
+
+	<div class="content">
+		<div class="body">
+			@{body}
+		</div>
+		<footer>
+			<div>
+				<nav>
+					<a href="/">Úvod</a>
+					<a href="/projekt/">Projekt</a>
+					<a href="/faq/">FAQ</a>
+					<a href="/api/">API</a>
+					<a href="https://github.com/orgs/anti-troll-system/" target="_blank">GitHub</a>
+					<a href="/kontakt/">Kontakt</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+
+</body>
+</html>

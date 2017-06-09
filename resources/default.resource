@@ -1,0 +1,1 @@
+error-recaptcha        : Neplatné overenie Vášho počítača

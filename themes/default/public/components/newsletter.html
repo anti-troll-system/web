@@ -1,0 +1,32 @@
+<div class="panel">
+	<div class="padding" data-jc-scope="?">
+		<div class="help nmt m">Odoberajte najnovšie informácie z Anti-Troll systému <strong>Patroll</strong> na svoj email.</div>
+		<div>
+			<div class="newsletter-button"><button class="button" data-jc="click" data-jc-path="#newsletter.submit" data-enter=".centered"><i class="fa fa-envelope-o"></i></button></div>
+			<div class="newsletter-input"><div data-jc="textbox" data-jc-path="email" data-placeholder="Vaša em@ilová adresa" data-jc-type="email" data-required="true" data-jc-value="''"></div></div>
+		</div>
+		<div class="newsletter-success hidden" data-jc="visible" data-jc-path="response" data-if="value && value.success === true"><i class="fa fa-check-circle"></i>Ďakujeme, Vaša adresa bola zaregistrovaná.</div>
+	</div>
+</div>
+
+<style>
+	.newsletter-input { margin-right: 50px; }
+	.newsletter-input .ui-textbox { border-radius: 3px 0 0 3px; height: 30px; display: block; padding: 6px 10px 0 4px; line-height: 16px; }
+	.newsletter-input .ui-textbox input { font-size: 12px; line-height: 16px; }
+	.newsletter-button { float: right; width: 50px; }
+	.newsletter-button button { border-radius: 0 3px 3px 0; font-size: 14px; height: 30px; background-color: #E0E0E0; color: #505050; }
+	.newsletter-button button .fa { margin-right: 0; }
+	.newsletter-success { margin: 15px 0 0; font-size: 12px; }
+	.newsletter-success .fa { margin-right: 5px; color: #8CC152; }
+</style>
+
+<script>
+	OPERATION('newsletter.submit', function(component) {
+		var path = component.pathscope + '.*';
+		CAN(path) && SETTER('loading', 'show') && AJAX('POST /api/newsletter/', GET(component.pathscope), function(response) {
+			SETTER('loading', 'hide', 1000);
+			SET(component.pathscope + '.response', response);
+			response.success && DEFAULT(path, true);
+		});
+	});
+</script>

@@ -1,0 +1,8 @@
+homepage             : Úvodná stránka                   -->              /
+faq                  : Často kladené otázky             -->              /faq/               --> homepage
+project              : Projekt                          -->              /projekt/           --> homepage
+api                  : Otvorené API                     -->              /api/               --> homepage
+contact              : Kontakt                          -->              /kontakt/           --> homepage
+report               : Nahlásenie príspevku             -->              /report/            --> homepage
+users                : Užívatelia                       -->              /uzivatelia/        --> homepage
+profile              : Profil užívateľa                 -->              /uzivatelia/{id}/   --> users

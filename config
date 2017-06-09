@@ -4,7 +4,7 @@ version                         : 1.0.0
 secret                          : banTROLL
 
 // Endpoint pre službu
-service                         : https://api1.petersirka.sk
+service                         : https://api1.patroll.org
 
 // Mail settings
 mail-smtp                       : smtp.yourwebsite.com
@@ -12,3 +12,7 @@ mail-smtp-options               : {"secure":false,"port":25,"user":"","password"
 mail-address-from               : your@yourwebsite.com
 mail-address-reply              : your@yourwebsite.com
 mail-address-copy               :
+
+default-theme                   : default
+
+recaptcha                       : 6LeOgCQUAAAAAOaX6tzGC0pdakoORQiXEOSMRM6J
