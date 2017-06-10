@@ -1,7 +1,6 @@
 exports.install = function() {
 	F.route('#homepage');
 	F.route('#faq');
-	F.route('#api');
 	F.route('#project');
 	F.route('#contact');
 	F.route('#report');
