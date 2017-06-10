@@ -33,7 +33,6 @@ h2 .fa { margin-right: 8px; }
 .svg { margin-bottom: 50px; position: relative; }
 
 .logo { float: left; background-color: #D4ECF9; height: 49px; padding: 5px 0 0 0; margin-right: 15px; width: 49px; text-align: center; }
-.m { margin-bottom: 20px; }
 
 .animate .logo img { transform: scale(1) rotate(0deg); }
 
@@ -66,6 +65,7 @@ h2 .fa { margin-right: 8px; }
 .b { font-weight: bold; }
 
 @media(max-width: 767px) {
+	h1 { text-align: left; margin-bottom: 25px; }
 	.svg { margin-bottom: 10px; }
 	.mainmenubutton { display: block; }
 	header nav { position: absolute; width: 100%; left: 0; float: none; right: 0; border-radius: 0; background-color: #D4ECF9; top: 35px; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: none; transition: all 0.3s; }
@@ -79,7 +79,7 @@ h2 .fa { margin-right: 8px; }
 	.body { padding: 0 10px; }
 }
 
-footer { margin: 50px 0 10px; text-align: center; line-height: 16px; font-size: 12px; }
+footer { margin: 30px 0 10px; text-align: center; line-height: 16px; font-size: 12px; }
 footer > div { margin: 0 auto; max-width: 400px; width: 100%; border-top: 1px solid #E0E0E0; padding: 20px 0 0; font-size: 11px; color: gray; }
 footer nav { font-size: 12px; margin: 10px 0 20px; }
 footer nav a { margin-left: 10px; color: gray; }
@@ -94,3 +94,8 @@ footer img { max-width: 150px; }
 .center .img-responsive { margin-left: auto; margin-right: auto; }
 .success { margin: 15px 0 0; }
 .success .fa { margin-right: 5px; color: #8CC152; }
+
+.links { list-style-type: none; margin: 0; padding: 0; font-size: 16px; }
+.links li { display: block; border-bottom: 1px solid #E0E0E0; padding: 8px 0; }
+.links .fa { margin-right: 8px; }
+.m { margin-bottom: 20px; }
