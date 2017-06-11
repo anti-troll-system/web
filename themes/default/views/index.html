@@ -5,21 +5,37 @@
 	<div class="centered">
 		<div class="centered-body">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 m">
-					<div>
-						<div class="inputbutton-button"><button class="button" data-jc="click" data-jc-path="doSubmit" data-enter=".centered"><i class="fa fa-send"></i><span>Pokračovať</span></button></div>
-						<div class="inputbutton-input"><div data-jc="textbox" data-jc-path="common.q" data-placeholder="Vložiť Facebook URL adresu na príspevok alebo profil užívateľa" data-autofocus="true"></div></div>
+				<div class="col-md-6 m form-report">
+					<h2>Nahlásiť nevhodný príspevok</h2>
+					<div class="gray">Linka na nevhodný Facebook príspevok</div>
+					<div class="inputbutton">
+						<div class="inputbutton-button"><button class="button" data-jc="click" data-jc-path="report_submit" data-enter=".form-report"><i class="fa fa-send"></i><span>Pokračovať</span></button></div>
+						<div class="inputbutton-input"><div data-jc="textbox" data-jc-path="report.url" data-placeholder="Vlož linku" data-autofocus="true" data-jc-value="''"></div></div>
 					</div>
 					<div class="help">
-						<i class="fa fa-support"></i><a href="/faq/#zaciname" target="_blank">Ako získať URL adresu?</a><!-- - <a href="https://www.patroll.org/report/?url=https%3A%2F%2Fwww.facebook.com%2Foskar.dobrovodsky%2Fposts%2F1576314412427652%3Fcomment_id%3D1576870255705401%26comment_tracking%3D%257B%2522tn%2522%253A%2522R2%2522%257D">Ukážka</a> -->
+						<i class="fa fa-support"></i><a href="/faq/#zaciname" target="_blank">Ako získam linku na Facebook diskusný príspevok?</a>
 					</div>
-					<br />
-					<br />
+				</div>
+				<div class="col-md-6 m form-users">
+					<h2>Vyhľadať Facebook užívateľa</h2>
+					<div class="gray">Užívateľské meno alebo linka na profil na Facebooku</div>
+					<div class="inputbutton">
+						<div class="inputbutton-button"><button class="button" data-jc="click" data-jc-path="users_submit" data-enter=".form-users"><i class="fa fa-search"></i><span>Vyhľadať</span></button></div>
+						<div class="inputbutton-input"><div data-jc="textbox" data-jc-path="users.q" data-placeholder="Vlož linku" data-autofocus="true" data-jc-value="''"></div></div>
+					</div>
+					<div class="help">
+						<i class="fa fa-support"></i><a href="/faq/#zaciname" target="_blank">Ako získam linku na užívateľský profil na Facebooku?</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<br class="hidden-xs" />
 					<hr />
 					<p class="description center"><i class="fa fa-lightbulb-o"></i><b>TIP:</b> nahlasujte nevhodné príspevky pohodlnejšie cez <a href="/extension/">rozšírenie pre Váš prehliadač</a>.</p>
 					<br />
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-8 col-md-offset-2">
 							<div data-jc-url="@{'/components/newsletter.html'}" data-jc-cache="10 minutes"></div>
 						</div>
 					</div>
@@ -39,17 +55,16 @@
 		dom.$height < h && el.css('height', h);
 	});
 
-	function doSubmit() {
-		if (!common.q || !common.q.isURL() || BLOCKED('submit', 1000))
+	function report_submit() {
+		if (!report.url || !report.url.isURL() || BLOCKED('report_submit', 1000))
 			return;
 
 		var reg = /\/(posts|groups|videos)\//i;
-
-		if (reg.test(common.q)) {
-			location.href = '@{sitemap_url('report')}?url=' + encodeURIComponent(common.q);
-		} else {
-			// profile
-		}
+		location.href = '@{sitemap_url('report')}?url=' + encodeURIComponent(common.q);
+	}
+	function report_submit() {
+		if (!users.q || !users.q.isURL() || BLOCKED('users_submit', 1000))
+			return;
 	}
 
 </script>
