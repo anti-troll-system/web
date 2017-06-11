@@ -1,41 +1,56 @@
-@{head('<script src="https://www.google.com/recaptcha/api.js" async defer></script>')}
-
 <div class="container">
-	<h1>@{title}</h1>
-	<div class="center m">
-		<div class="fb-comment-embed" data-href="@{query.url}" data-width="560" data-include-parent="false"></div>
-		<div data-jc="post" data-jc-path="postdata"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<div class="m">
-				<div data-jc="textarea" data-jc-path="report.notes">Doplňujúce údaje</div>
+	<div data-b="report.response" data-b-visible="value === undefined">
+		<h1>@{title}</h1>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 m">
+				<div class="panel padding hidden" data-b="postdata.reported" data-b-template="true" data-b-visible="n => n && n.author">
+					<script type="text/html">
+						<a href="{{ value.author.profileLink }}" target="_blank" class="b black">{{ value.author.name }}</a>
+						<div class="help" style="margin-top:5px"><i class="fa fa-calendar"></i>{{ value.inappropriateContent.date | format('dd.MM.yyyy o HH:mm') }}</div>
+						<p>{{ value.inappropriateContent.message }}</p>
+
+					</script>
+				</div>
 			</div>
-			<!--
-			<div class="m">
-				<div data-jc="recaptcha" data-jc-path="report.recaptcha" data-key="6LeOgCQUAAAAAH0x_slwbHF4OM6T5IrbMs2VB0O5" data-required="true"></div>
-			</div>
-			-->
 		</div>
-	</div>
-	<hr />
-	<br />
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<div data-jc="error" data-jc-path="report.response"></div>
-			<div class="row">
-				<div class="col-md-6">
-					<div data-jc="validation" data-jc-path="report">
-						<button class="button button-large exec" data-exec="doSubmit" disabled="disabled"><i class="fa fa-check-circle"></i>DOKONČIŤ</button>
+		<br />
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="m">
+					<div data-jc="textbox" data-jc-path="report.url" class="m" data-required="true" data-icon="fa-facebook-square">URL adresa</div>
+					<div data-jc="textarea" data-jc-path="report.notes" class="m">Doplňujúce údaje</div>
+				</div>
+				<div data-jc="error" data-jc-path="report.response"></div>
+				<div class="row">
+					<div class="col-md-6">
+						<div data-jc="validation" data-jc-path="report" data-if="value.confirmed">
+							<button class="button button-large exec" data-exec="report_submit" disabled="disabled"><i class="fa fa-check-circle"></i>DOKONČIŤ</button>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<br />
+						<a href="/">Zrušiť nahlásenie</a>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<br />
-					<a href="/">Zrušiť nahlásenie</a>
-				</div>
 			</div>
 		</div>
 	</div>
+
+	<div data-b="report.response" data-b-visible="value !== undefined" class="hidden center success">
+		<br />
+		<i class="fa fa-check-circle green fa-5x m"></i>
+		<div><b>Ďakujeme</b>, príspevok bol úspešne nahlásený.</div>
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<a href="/" class="button button-large">Pokračovať</a>
+			</div>
+		</div>
+		<br />
+		<br />
+	</div>
+
 </div>
 
 @{json(query, 'querydata')}
@@ -43,11 +58,18 @@
 
 	var report = PARSE($('#querydata').html());
 
-	function doSubmit() {
+	WATCH('report.url', function(path, value) {
+		SET('report.confirmed', false);
+		value.isURL() && value.indexOf('facebook.com') !== -1 && value.lastIndexOf('comment_id') !== -1 && AJAX('GET /api/verify/', report, function(response) {
+			SET('postdata', response);
+			SET('report.confirmed', response && response.reported.author ? true : false);
+			report.confirmed && CHANGE('report.url', true);
+		});
+	}, true);
+
+	function report_submit() {
 		RESET('report.*', true);
 		AJAX('POST /api/report/', report, 'report.response');
 	}
-</script>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/sk_SK/sdk.js#xfbml=1&version=v2.9&appId=210111095719871";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+</script>

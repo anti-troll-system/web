@@ -2,7 +2,6 @@ NEWSCHEMA('Report').make(function(schema) {
 
 	schema.define('url', 'URL', true);
 	schema.define('notes', 'String(1000)');
-	schema.define('recaptcha', 'String', true);
 
 	schema.addWorkflow('reCAPTCHA', function(error, model, options, callback, controller) {
 		RESTBuilder.make(function(builder) {
@@ -19,12 +18,17 @@ NEWSCHEMA('Report').make(function(schema) {
 		});
 	});
 
+	schema.addWorkflow('verify', function(error, model, options, callback) {
+		var builder = RESTBuilder.antitroll('/verify/');
+		builder.json(options);
+		builder.exec(callback);
+	});
+
 	schema.setSave(function(error, model, options, callback, controller) {
-		var data = model.$clean();
-		data.recaptcha = undefined;
-		data.datecreated = F.datetime;
-		data.ip = controller.ip;
-		NOSQL('report').insert(data);
-		callback(SUCCESS(true));
+		model.ip = controller.ip;
+		var builder = RESTBuilder.antitroll('/report/');
+		builder.json(model);
+		builder.exec(callback);
+		NOSQL('reports').insert(model);
 	});
 });
