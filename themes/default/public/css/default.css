@@ -32,8 +32,8 @@ h2 .fa { margin-right: 8px; }
 .svg > svg { position: absolute; }
 .svg { margin-bottom: 50px; position: relative; }
 
-.logo { float: left; background-color: #D4ECF9; height: 49px; padding: 5px 0 0 0; margin-right: 15px; width: 49px; text-align: center; }
-
+.logo { float: left; height: 49px; padding: 8px 0 0 10px; margin-right: 15px; text-align: center; }
+.logo img { height: 35px; }
 .animate .logo img { transform: scale(1) rotate(0deg); }
 
 .panel { background-color: white; border-radius: 3px; border: 1px solid #E0E0E0; }
