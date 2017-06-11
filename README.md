@@ -27,8 +27,6 @@ Web pre Anti-troll system
 
 ## To-do
 
-- [ ] chýba logo (kamarát prekreslý to zelené)
-- [ ] potrebujeme doménu
 - [ ] SMTP mail sender
 - [ ] potrebujeme id + secret z Facebook APP
 - [ ] favicon
