@@ -1,1 +1,1 @@
-require('total.js/watch');
+require('total.js/debug');
