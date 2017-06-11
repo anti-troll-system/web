@@ -58,11 +58,10 @@
 	function report_submit() {
 		if (!report.url || !report.url.isURL() || BLOCKED('report_submit', 1000))
 			return;
-
 		var reg = /\/(posts|groups|videos)\//i;
-		location.href = '@{sitemap_url('report')}?url=' + encodeURIComponent(common.q);
+		location.href = '@{sitemap_url('report')}?url=' + encodeURIComponent(report.url);
 	}
-	function report_submit() {
+	function users_submit() {
 		if (!users.q || !users.q.isURL() || BLOCKED('users_submit', 1000))
 			return;
 	}
