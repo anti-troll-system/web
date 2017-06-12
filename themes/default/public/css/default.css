@@ -101,3 +101,13 @@ footer img { max-width: 150px; }
 .links li { display: block; border-bottom: 1px solid #E0E0E0; padding: 8px 0; }
 .links .fa { width: 22px; }
 .m { margin-bottom: 20px; }
+
+.logos {
+	text-align: center;
+}
+
+.logos img{
+	padding: 10px 25px;
+	height: 80px;
+	width: auto;
+}
