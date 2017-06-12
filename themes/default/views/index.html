@@ -5,37 +5,55 @@
 	<div class="centered">
 		<div class="centered-body">
 			<div class="row">
+				<p class="intro col-md-12"><span class="first">Riešime nenávistné prejavy na internete.</span><span class="second">Stránka umožňuje nahlasovanie a evidenciu nevhodných príspevkov v diskusiách.</span><span class="third">Zapojiť sa môže každý!</span></p>
+			</div>
+			
+			<div class="row">
 				<div class="col-md-6 m form-report">
-					<h2>Nahlásiť nevhodný príspevok</h2>
-					<div class="gray">Linka na nevhodný Facebook príspevok</div>
-					<div class="inputbutton">
-						<div class="inputbutton-button"><button class="button" data-jc="click" data-jc-path="report_submit" data-enter=".form-report"><i class="fa fa-send"></i><span>Pokračovať</span></button></div>
-						<div class="inputbutton-input"><div data-jc="textbox" data-jc-path="report.url" data-placeholder="Vlož linku" data-autofocus="true" data-jc-value="''"></div></div>
-					</div>
-					<div class="help">
-						<i class="fa fa-support"></i><a href="/faq/#zaciname" target="_blank">Ako získam linku na Facebook diskusný príspevok?</a>
+					<div class="inner-wrap">
+						<h2>Nahlásiť nevhodný príspevok</h2>
+						<div class="gray">Linka na nevhodný Facebook príspevok</div>
+						<div class="inputbutton">
+							<div class="inputbutton-button"><button class="button" data-jc="click" data-jc-path="report_submit" data-enter=".form-report"><i class="fa fa-send"></i><span>Pokračovať</span></button></div>
+							<div class="inputbutton-input"><div data-jc="textbox" data-jc-path="report.url" data-placeholder="Vlož linku" data-autofocus="true" data-jc-value="''"></div></div>
+						</div>
+						<div class="help">
+							<i class="fa fa-support"></i><a href="/faq/#zaciname" target="_blank">Ako získam linku na Facebook diskusný príspevok?</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-6 m form-users">
-					<h2>Vyhľadať Facebook užívateľa</h2>
-					<div class="gray">Užívateľské meno alebo linka na profil na Facebooku</div>
-					<div class="inputbutton">
-						<div class="inputbutton-button"><button class="button" data-jc="click" data-jc-path="users_submit" data-enter=".form-users"><i class="fa fa-search"></i><span>Vyhľadať</span></button></div>
-						<div class="inputbutton-input"><div data-jc="textbox" data-jc-path="users.q" data-placeholder="Vlož linku" data-autofocus="true" data-jc-value="''"></div></div>
-					</div>
-					<div class="help">
-						<i class="fa fa-support"></i><a href="/faq/#zaciname" target="_blank">Ako získam linku na užívateľský profil na Facebooku?</a>
+					<div class="inner-wrap">
+						<h2>Vyhľadať Facebook užívateľa</h2>
+						<div class="gray">Užívateľské meno alebo linka na profil na Facebooku</div>
+						<div class="inputbutton">
+							<div class="inputbutton-button"><button class="button" data-jc="click" data-jc-path="users_submit" data-enter=".form-users"><i class="fa fa-search"></i><span>Vyhľadať</span></button></div>
+							<div class="inputbutton-input"><div data-jc="textbox" data-jc-path="users.q" data-placeholder="Vlož linku" data-autofocus="true" data-jc-value="''"></div></div>
+						</div>
+						<div class="help">
+							<i class="fa fa-support"></i><a href="/faq/#zaciname" target="_blank">Ako získam linku na užívateľský profil na Facebooku?</a>
+						</div>
 					</div>
 				</div>
 			</div>
+			
+			
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<br class="hidden-xs" />
-					<hr />
-					<p class="description center"><i class="fa fa-lightbulb-o"></i><b>TIP:</b> nahlasujte nevhodné príspevky pohodlnejšie cez <a href="/extension/">rozšírenie pre Váš prehliadač</a>.</p>
-					<br />
+					<!--<br class="hidden-xs" />-->
+					<!--<hr />-->
+					<p class="description center extension"><i class="fa fa-lightbulb-o"></i><b>TIP:</b> nahlasujte nevhodné príspevky<br />pohodlnejšie cez <a href="/extension/">rozšírenie pre Váš prehliadač</a>.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<p class="prototype col-md-12">UPOZORNENIE: Táto stránka je len prototyp a nie je plne funkčná!</p>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
 					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
+						<div class="col-md-8 col-md-offset-2 mailinglist">
 							<div data-jc-url="@{'/components/newsletter.html'}" data-jc-cache="10 minutes"></div>
 						</div>
 					</div>

@@ -1,0 +1,365 @@
+
+
+$max-width: 1024px;
+
+$color-green: #6fc055;
+$color-darker-green: #55ac4e;
+$color-dark-green: #1b8340;
+$color-red: #e45959;
+
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: 16px;
+}
+
+header {
+	margin: 0;
+	position: fixed;
+	z-index: 1;
+	background: $color-green;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 6em;
+	border: 0;
+	box-shadow: 0 0.8em 0 rgba(0,0,0,0.12);
+	
+	.wrapper {
+		max-width: $max-width;
+		margin: 0 auto;
+		height: 100%;
+
+		h1 {
+			width: 230px;
+			height: 100%;
+			text-align: left;
+			white-space: nowrap;
+			overflow: hidden;
+			text-indent: -1000em;
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 0.0.5em;
+			margin-bottom: 0;
+			
+			.logo {
+				display: block;
+				background: red;
+				float: none;
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				text-align: left;
+				background: url('../../img/patroll-logo.gif') no-repeat center center;
+				background-size: contain;
+			}
+			
+			.claim {
+				display: none;
+			}
+		}
+		
+		nav.mainmenu {
+			margin-top: 1.5em;
+			
+			html.smadium-less &.mainmenu-visible {
+				margin-top: 3.8em;
+			}
+			
+			a {
+				font-family: arial narrow;
+				color: white;
+				text-transform: lowercase;
+				font-size: 1.5em;
+				border: 0;
+				padding: 0.25em 1em 0.35em 1em;
+				border-radius: 0.25em;				
+				text-shadow: 0 0.1em 0.2em rgba(0,0,0,0.25);
+				margin-left: 0.5em;
+				
+				&:hover {
+					background: $color-darker-green;
+					
+					html.smadium-less & {
+						background: #092e16;
+					}
+				}
+				
+				&.selected {
+					font-weight: normal;
+					background: $color-dark-green;
+					
+					html.smadium-less & {
+						background: $color-dark-green;
+					}
+				}
+				
+				html.smadium-less & {
+					border-radius: 0;
+					margin-left: 0em;
+					padding-top: 0.5em;
+					padding-bottom: 0.5em;
+				}
+			}
+		}
+		
+		.mainmenubutton {
+			//background: red;
+			width: 3em;
+			height: 3em;
+			margin-top: 1.4em;
+			margin-right: 0.8em;
+			
+			i {
+				display: none;
+			}
+			
+			button {
+				width: 100%;
+				height: 100%;
+				
+				background: url('../../img/hamburger.gif') no-repeat center center;
+				background-size: 80% auto;
+			}
+		}
+	}
+}
+
+.content {
+	max-width: $max-width;	
+	margin: 0 auto;
+	padding-top: 8em;
+	padding-bottom: 3em;
+	
+	html.smadium-less & {
+		padding-top: 6.5em;
+	}
+	
+	h1 {
+		margin-top: 0.5em;
+		text-align: left;
+	}
+
+}
+
+footer {
+	background: #EEE;
+	padding: 1.5em;
+	margin: 0;
+	text-align: left;
+	
+	> div {
+		border: 0;
+		font-size: 0.9rem;
+		max-width: $max-width;
+		
+		// clearfix
+		&:after {
+		  visibility: hidden;
+		  display: block;
+		  font-size: 0;
+		  content: " ";
+		  clear: both;
+		  height: 0;
+		}
+		
+		.copyright {
+			float: left;
+			font-size: inherit;
+			position: relative;
+			top: -0.5em;
+			
+			html.medium-less & {
+				float: none;
+				text-align: center;				
+				line-height: 140%;
+			}
+		}
+	
+		nav {
+			font-size: inherit;
+			float: right;
+			margin: 0;
+			position: relative;
+			top: -0.5em;
+			
+			html.medium-less & {
+				float: none;
+				text-align: center;
+				margin-bottom: 1em;				
+			}
+			
+			a {
+				display: inline-block;
+				padding: 0.1em 1.2em;
+				margin: 0;
+				
+				+ a {
+					border-left: 1px solid rgba(0,0,0,0.25);
+				}
+				
+				html.medium-less & {
+					padding: 0.1em 0.5em;
+				}
+			}
+		}
+	}
+}
+
+
+
+.content {
+
+	.container {
+		width: auto;
+		
+		> .centered {
+			height: auto !important;
+		}
+	}
+	
+	.intro {
+		font-size: 1.1rem;
+		background: #FBFBFB;
+		text-align: center;
+		margin-bottom: 3em;
+		line-height: 150%;
+		padding: 0.6em;
+		border: 1px solid #ddd;
+		box-shadow: 0 0.1em 0.75em rgba(0,0,0,0.1);
+		
+		span {
+			display: block;
+			line-height: 150%;
+			
+			&.first {
+				font-size: 150%;
+			}
+			
+			&.third {
+				font-size: 125%;
+			}
+		}
+	}
+	
+	%box {
+		padding: 1.25em;
+		border: 1px solid rgba(0,0,0,0.15);
+		//box-shadow: 0 0.15em 0.65em rgba(0,0,0,0.1);
+	
+		h2 {
+			font-size: 1.75rem;
+			margin-bottom: 0.75em;
+			
+			html.medium-less & {
+				font-size: 1.5em;
+				line-height: 135%;
+			}
+		}
+		
+		.gray {
+			font-size: 1.15rem;
+			color: rgba(0,0,0, 0.7);
+			
+			html.medium-less & {
+				font-size: 1em;
+				line-height: 135%;
+			}
+		}
+		
+		.ui-textbox {
+			background: #F5F5F5;
+			
+			input {
+				background: transparent;
+			}
+		}
+		
+		button {
+			border-radius: 0.25em;
+			font-size: 1.2em;
+			
+			html.medium-less & {
+				font-size: 1em;
+			}
+		}
+	}
+	
+	.form-report {
+		padding: 0;		
+		
+		.inner-wrap {
+			@extend %box;
+			margin-right: 1em;
+			//background: #FFF5F5;
+			//border: 2px solid #DBB;
+			//box-shadow: 0 0.2em 0.85em rgba(125,0,0,0.2);
+			
+			html.medium-less & { 
+				margin-right: 0;
+				border: 0;
+			}
+			
+			h2 {
+				color: #A00;
+			}
+			
+			button {
+				background: #A00;
+			}
+		}
+	}
+	
+	.form-users {
+		padding: 0;
+		
+		.inner-wrap {
+			@extend %box;			
+			margin-left: 1em;
+			//background: #F5FFF5;
+			//border: 2px solid #BDB;
+			//box-shadow: 0 0.2em 0.85em rgba(0,100,0,0.2);
+			
+			html.medium-less & { 
+				margin-left: 0;
+				border: 0;
+			}
+			
+			h2 {
+				color: #080;
+			}
+			
+			button {
+				background: #080;
+			}		
+		}
+	}
+
+	.extension {
+		font-size: 1.2em;
+		line-height: 140%;
+	}
+	
+	.mailinglist {
+		font-size: 1.0em;
+		line-height: 140%;
+		width: 100%;
+		margin-left: 0;
+		//max-width: 500px;
+		//margin: 1.5em auto;
+		
+		* {
+			font-size: inherit;
+		}
+	}
+	
+	.prototype {
+		text-align: center;
+		margin-bottom: 2em;
+		color: #A00;
+		text-shadow: 0 0 1.25em rgba(200, 0, 0, 0.5);
+	}
+}

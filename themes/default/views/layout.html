@@ -17,34 +17,38 @@
 	<div data-jc="loading" class="hidden"></div>
 
 	<header>
-		<a href="/" class="logo"><img src="/img/logo.svg" height="40" border="0" alt="Patroll" /></a>
-		<div class="mainmenubutton">
-			<button class="exec" data-exec="mainmenu"><i class="fa fa-th"></i></button>
+		<div class="wrapper">
+			<h1><a href="/" class="logo">PATROLL</a> <span class="claim">za lepšiu diskusiu</span></h1>
+			<div class="mainmenubutton">
+				<button class="exec" data-exec="mainmenu"><i class="fa fa-th"></i></button>
+			</div>
+			<nav class="mainmenu" data-b="common.mainmenu" data-b-class="n => n ? '+mainmenu-visible' : '-mainmenu-visible'">
+				<a href="/">Úvod</a>
+				<a href="/projekt/">O projekte</a>
+				<a href="/faq/">FAQ</a>
+				<a href="/kontakt/">Kontakt</a>
+			</nav>
 		</div>
-		<nav class="mainmenu" data-b="common.mainmenu" data-b-class="n => n ? '+mainmenu-visible' : '-mainmenu-visible'">
-			<a href="/">Úvodná stránka</a>
-			<a href="/faq/">FAQ</a>
-			<a href="/projekt/">Projekt</a>
-			<a href="/kontakt/">Kontakt</a>
-		</nav>
 	</header>
 
 	<div class="content">
 		<div class="body">
 			@{body}
-		</div>
-		<footer>
-			<div>
-				<nav>
-					<a href="/">Úvodná stránka</a>
-					<a href="/projekt/">Projekt</a>
-					<a href="/faq/">FAQ</a>
-					<a href="https://github.com/orgs/anti-troll-system/" target="_blank">GitHub</a>
-					<a href="/kontakt/">Kontakt</a>
-				</nav>
-			</div>
-		</footer>
+		</div>		
 	</div>
+	
+	<footer>
+		<div class="wrapper">
+			<nav>
+				<a href="/">Úvod</a>
+				<a href="/projekt/">O projekte</a>
+				<a href="/faq/">FAQ</a>
+				<a href="https://github.com/orgs/anti-troll-system/" target="_blank">GitHub</a>
+				<a href="/kontakt/">Kontakt</a>
+			</nav>
+			<div class="copyright">&copy; 2017 Team PATROLL - Liek na každú nekalú&nbsp;činnosť&nbsp;je&nbsp;tansparentnosť!</div>
+		</div>
+	</footer>
 
 </body>
 </html>
