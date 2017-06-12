@@ -1,3 +1,64 @@
 <div class="container">
-	<h1>@{title}</h1>
+
+    <h1>@{title}</h1>
+
+    <div class="profileData">
+
+        <!--<img id="picture" src="@{model.profileData.picture}" alt="@{model.profileData.username} profile picture">-->
+        <img id="picture" src="./../img/profile.png" alt="@{model.profileData.username} profile picture">
+        <span id="name">@{model.profileData.name}</span>
+        <span id="username"><a href="@{model.profileData.profileLink}">@{model.profileData.username}</a></span>
+        <span id="source">@{model.profileData.source}</span>
+        <span id="description">@{model.profileData.description}</span>
+        <span id="profileType">@{model.profileData.profileType}</span>
+    </div>
+
+    <div class="contributionStats">
+
+        <span id="firstContribution">@{model.contributionStats.firstContribution}</span>
+        <span id="latestContribution">@{model.contributionStats.latestContribution}</span>
+        <span id="activeDaysCount">@{model.contributionStats.activeDaysCount}</span>
+        <span id="averageDailyActivity">@{model.contributionStats.averageDailyActivity}</span>
+        <span id="reportedCount">@{model.contributionStats.reportedCount}</span>
+        <span id="reportedByCount">@{model.contributionStats.reportedByCount}</span>
+
+        @{foreach category in model.contributionStats.reportedCountPerCategory}
+        <div class="category">
+            <div>@{index}</div>
+            <div>@{category.category}</div>
+            <div>@{category.count}</div>
+        </div>
+        @{end}
+
+        <span id="contributionCount">@{model.contributionStats.contributionCount}</span>
+        <span id="postsCount">@{model.contributionStats.postsCount}</span>
+        <span id="commentedPostsCount">@{model.contributionStats.commentedPostsCount}</span>
+        <span id="commentedSourcesCount">@{model.contributionStats.commentedSourcesCount}</span>
+        <span id="conspirationContributionCount">@{model.contributionStats.conspirationContributionCount}</span>
+    </div>
+
+    <div class="reportingStats">
+
+        <span id="reportCount">@{model.contributionStats.reportCount}</span>
+
+        @{foreach category in model.contributionStats.reportedCountPerCategory}
+        <div class="category">
+            <div>@{index}</div>
+            <div>@{category.category}</div>
+            <div>@{category.count}</div>
+        </div>
+        @{end}
+
+        <span id="reportContributionCount">@{model.contributionStats.reportContributionCount}</span>
+        <span id="reportSourcesCount">@{model.contributionStats.reportSourcesCount}</span>
+        <span id="voteCount">@{model.contributionStats.voteCount}</span>
+
+        @{foreach category in model.contributionStats.voteCountPerCategory}
+        <div class="category">
+            <div>@{index}</div>
+            <div>@{category.category}</div>
+            <div>@{category.count}</div>
+        </div>
+        @{end}
+    </div>
 </div>
