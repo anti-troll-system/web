@@ -9,7 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["anti", "troll", "system", "patroll"],
+  "keywords": [
+    "anti",
+    "troll",
+    "system",
+    "patroll"
+  ],
   "author": "Slovenskí vývojári",
   "license": "MIT"
 }
