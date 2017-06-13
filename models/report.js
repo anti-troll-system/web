@@ -19,14 +19,14 @@ NEWSCHEMA('Report').make(function(schema) {
 	});
 
 	schema.addWorkflow('verify', function(error, model, options, callback) {
-		var builder = RESTBuilder.antitroll('/verify/');
+		var builder = RESTBuilder.patroll('/verify/');
 		builder.json(options);
 		builder.exec(callback);
 	});
 
 	schema.setSave(function(error, model, options, callback, controller) {
 		model.ip = controller.ip;
-		var builder = RESTBuilder.antitroll('/report/');
+		var builder = RESTBuilder.patroll('/report/');
 		builder.json(model);
 		builder.exec(callback);
 		NOSQL('reports').insert(model);
